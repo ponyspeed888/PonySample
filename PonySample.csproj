@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="pandoc -o $(ProjectDir)\README.md --extract-media=./ $(ProjectDir)\README.md.odt&#xD;&#xA;" />
+  </Target>
+
+  <ItemGroup>
+    <Compile Remove="GeneratedCodeCustom\**" />
+    <EmbeddedResource Remove="GeneratedCodeCustom\**" />
+    <None Remove="GeneratedCodeCustom\**" />
+    <Page Remove="GeneratedCodeCustom\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="s:\NUGET_PACKAGES\ponydbcontextscaffold\0.0.3-alpha\contentFiles\any\netstandard2.1\notes.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup><!--<ProjectReference Include="..\MyNuGet\PonyDbContextScaffold\PonyDbContextScaffold.csproj" />-->
+  
+    <PackageReference Include="PonyDbContextScaffold" Version="0.0.3-alpha" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="CustomGenerators\SampleGenerator.cs">
+      <DependentUpon>SampleGenerator.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="CustomGenerators\SampleGenerator.tt">
+      <LastGenOutput>SampleGenerator.cs</LastGenOutput>
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>

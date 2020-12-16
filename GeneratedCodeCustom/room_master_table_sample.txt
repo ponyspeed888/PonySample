@@ -1,0 +1,45 @@
+﻿
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Text;
+using System.Windows.Forms;
+
+namespace CodeGenApp
+{
+    public partial class room_master_tableEntityEditor : UserControl
+    {
+ 
+
+            
+
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 9;
+            this.id.Name = "id";
+            this.id.Width = 175;
+            
+            
+
+            this.identity_hash.DataPropertyName = "identity_hash";
+            this.identity_hash.HeaderText = "identity_hash";
+            this.identity_hash.MinimumWidth = 9;
+            this.identity_hash.Name = "identity_hash";
+            this.identity_hash.Width = 175;
+            
+            
+
+            this.id,this.identity_hash,});
+
+
+
+    }
+}
+
+
+

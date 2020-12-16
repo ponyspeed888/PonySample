@@ -1,0 +1,53 @@
+﻿
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Text;
+using System.Windows.Forms;
+
+namespace CodeGenApp
+{
+    public partial class movieEntityEditor : UserControl
+    {
+ 
+
+            
+
+            this.mid.DataPropertyName = "mid";
+            this.mid.HeaderText = "mid";
+            this.mid.MinimumWidth = 9;
+            this.mid.Name = "mid";
+            this.mid.Width = 175;
+            
+            
+
+            this.directorId.DataPropertyName = "directorId";
+            this.directorId.HeaderText = "directorId";
+            this.directorId.MinimumWidth = 9;
+            this.directorId.Name = "directorId";
+            this.directorId.Width = 175;
+            
+            
+
+            this.title.DataPropertyName = "title";
+            this.title.HeaderText = "title";
+            this.title.MinimumWidth = 9;
+            this.title.Name = "title";
+            this.title.Width = 175;
+            
+            
+
+            this.mid,this.directorId,this.title,});
+
+
+
+    }
+}
+
+
+

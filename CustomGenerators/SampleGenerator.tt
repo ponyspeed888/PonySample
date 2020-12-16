@@ -1,0 +1,43 @@
+﻿<#@ template language="C#" Inherits="PonyDbContextScaffold.GenCustomClasses.EntityT4GeneratorBase" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Microsoft.EntityFrameworkCore.Metadata" #>
+<#@ import namespace="Microsoft.EntityFrameworkCore" #>
+<#@ import namespace="PonyDbContextScaffold.GenCustomClasses" #>
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Text;
+using System.Windows.Forms;
+
+namespace CodeGenApp
+{
+    public partial class <#=entityName#>EntityEditor : UserControl
+    {
+ 
+
+            <#=GenColumns ()#>
+
+            <#=PerPropertyGen("this.Url,", "Url", p => p.Name )#>});
+
+
+
+    }
+}
+
+
+
+<#+
+
+
+
+#>
+

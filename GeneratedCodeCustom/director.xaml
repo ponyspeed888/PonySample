@@ -1,0 +1,38 @@
+﻿
+<?xml version="1.0" encoding="UTF-8"?>
+<local:EFGridViewBase 
+    x:TypeArguments="models:moviesContext"
+    xmlns:models="clr-namespace:PonySample.GeneratedCodeCustom" 
+    x:Class="NutrientDb.Views.EFGridViewdirector"
+
+    xmlns:local="clr-namespace:NutrientDb.Views"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms" 
+    >
+    <ContentView.Content>
+
+        <StackLayout  >
+            <StackLayout x:Name="stkFilters" Orientation="Horizontal"   />
+
+            <Grid HeightRequest="240" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.35*" />
+                    <ColumnDefinition Width="0.75*" />
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="txtFilter"  Placeholder="No Filter" ClearButtonVisibility="WhileEditing" ReturnType="Search" />
+
+                <Entry x:Name="txtFilterCandidate"  Grid.Column="1"  />
+
+            </Grid>
+
+            <syncfusion:SfDataGrid x:Name="dataGrid"  x:FieldModifier="Public" ColumnSizer="None" AutoGenerateColumns="false"
+                AllowSorting="true"  AllowDraggingColumn="True" CanUseViewFilter="true"  NavigationMode="Cell"  AllowResizingColumn="True"
+                AllowEditing="True" EditTapAction="OnDoubleTap" SelectionMode="Single"    
+                               >
+            </syncfusion:SfDataGrid>
+
+        </StackLayout>
+    </ContentView.Content>
+</local:EFGridViewBase>

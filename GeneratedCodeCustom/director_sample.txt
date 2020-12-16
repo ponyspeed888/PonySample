@@ -1,0 +1,45 @@
+﻿
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Text;
+using System.Windows.Forms;
+
+namespace CodeGenApp
+{
+    public partial class directorEntityEditor : UserControl
+    {
+ 
+
+            
+
+            this.did.DataPropertyName = "did";
+            this.did.HeaderText = "did";
+            this.did.MinimumWidth = 9;
+            this.did.Name = "did";
+            this.did.Width = 175;
+            
+            
+
+            this.full_name.DataPropertyName = "full_name";
+            this.full_name.HeaderText = "full_name";
+            this.full_name.MinimumWidth = 9;
+            this.full_name.Name = "full_name";
+            this.full_name.Width = 175;
+            
+            
+
+            this.did,this.full_name,});
+
+
+
+    }
+}
+
+
+

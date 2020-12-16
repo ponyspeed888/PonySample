@@ -1,0 +1,37 @@
+﻿
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Text;
+using System.Windows.Forms;
+
+namespace CodeGenApp
+{
+    public partial class android_metadatumEntityEditor : UserControl
+    {
+ 
+
+            
+
+            this.locale.DataPropertyName = "locale";
+            this.locale.HeaderText = "locale";
+            this.locale.MinimumWidth = 9;
+            this.locale.Name = "locale";
+            this.locale.Width = 175;
+            
+            
+
+            this.locale,});
+
+
+
+    }
+}
+
+
+
